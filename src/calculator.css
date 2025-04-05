@@ -1,0 +1,107 @@
+/* Contenedor principal */
+.calculator {
+  width: 250px;
+  text-align: center;
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  background: #f9f9f9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Input donde se muestra la operación */
+.calculator-input {
+  width: 90%;
+  padding: 10px;
+  font-size: 1.5em;
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+/* Resultado */
+.calculator-result {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  min-height: 30px;
+}
+
+/* Contenedor de las filas de botones */
+.calculator-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cada fila de botones */
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+/* Estilos generales para botones */
+.calculator-button {
+  width: 50px;
+  height: 50px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border: none;
+  background: #ddd;
+  transition: background 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Cambio de color al pasar el ratón por encima */
+.calculator-button:hover {
+  background: #bbb;
+}
+
+/* Estilos para los botones numéricos */
+.calculator-button.number {
+  background: lightgray;
+}
+
+.calculator-button.number:hover {
+  background: #ccc;
+}
+
+/* Estilos para los botones de operadores */
+.calculator-button.operator {
+  background: #f596d7;
+  color: white;
+}
+
+.calculator-button.operator:hover {
+  background: #ef78c9;
+}
+
+/* Estilos para el botón "C" (Clear) */
+.calculator-button.clear {
+  background: rgb(138, 255, 166);
+  color: white;
+}
+
+.calculator-button.clear:hover {
+  background: rgb(56, 169, 66);
+}
+
+/* Estilos para el botón "=" (igual) */
+.calculator-button.equal {
+  width: 100%; /* Ocupa todo el ancho */
+  background: green;
+  color: white;
+}
+
+.calculator-button.equal:hover {
+  background: darkgreen;
+}
+
+/* Estilo para la fila con el botón "=" */
+.button-row:last-child .calculator-button {
+  width: 100%;
+  /* El botón "=" ocupa todo el ancho de la última fila */
+}
